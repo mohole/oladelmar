@@ -1,0 +1,275 @@
+ /*Reset CSS*/
+ *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+/* fonts utilizzati */
+
+@font-face {
+    font-family: Bebas-Regular;
+    src: url(fonts/Bebas-Regular.ttf);
+  }
+@font-face {
+    font-family: Ubuntu-Condensed;
+    src: url(fonts/UbuntuCondensed-Regular.ttf);
+  }
+
+/*Proprietà generali della pagina*/
+
+body{
+    font-size: 20px;
+    color: #2d2d2d;
+    background-color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav ul {
+    display: flex;
+}
+nav li {
+    display: inline-block; /* tende a togliere i pallini a <li> */
+    margin-left: 27px;
+    /* toglie i pallini al <li> */
+    list-style: none;
+    font-size: 23px;
+    text-transform: capitalize;
+}
+li a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-family: Bebas-Regular;
+}
+.active {
+    color: #0071bb;
+}
+#banner {
+    background: url(img/banner_volontari.jpg) no-repeat center center;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+}
+.background {
+    background: url(img/title_background.png) no-repeat center center;
+    background-size: 100% 100%;
+    font-family: Bebas-Regular;
+}
+
+section {
+    padding: 0px 10%;
+}
+footer {
+    height: 150px;
+    margin-top: 40px;
+}
+section.background {
+    margin: 0px 0px;
+    justify-content: space-evenly;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.flex {
+    margin-top: 15px;
+}
+    h2 {
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+    font-size: 45px;
+}
+.flex h2:nth-child(odd) {
+    font-size: 30px;
+}
+.flex h2:nth-child(even) {
+    font-size: 55px;
+}
+section.presentation {
+    margin-top: 60px;
+    padding: 0px 10px 0px 10px;
+}
+.presentation p:nth-child(1) {
+    width: 40%;
+    font-family: Ubuntu-Condensed;
+    line-height: 35px;
+}
+.presentation p:nth-child(2) {
+    width: 60%;
+    /* border: 2px solid black; */
+    text-align: right;
+}
+.activity h2,
+.blog h2 {
+    align-items: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 50px;
+
+}
+.col h3 {
+    font-size: 33px;
+    text-align: center;
+    padding: 8px 0px 20px 0px;
+    font-family: Bebas-Regular;
+    background: url(img/subtitle_background_blue.png) no-repeat center center;
+    background-size: 100% 45%;
+    background-position: top;
+}
+.blog_article {
+    font-family: Ubuntu-Condensed;
+    text-align: left;
+    margin: 20px 0px;
+    font-size: 27px;
+    line-height: 45px;
+}
+.activity .col {
+    width: 30%;
+    padding: 0px 10px 0px 10px;
+}
+div.flex {
+    margin-top: 45px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.col img {
+    width: 100%;
+}
+.col img:hover {
+    opacity: 0.7;
+}
+.blog .col {
+    width: 48%;
+    padding: 0px 10px 0px 10px;
+
+}
+
+/* mediaquery */
+
+@media (max-width: 1210px) {
+ 
+    .presentation p:nth-child(1) {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .presentation p:nth-child(2) {
+        width: 100%;
+        text-align: center;
+    }
+    .col h3 {
+        font-size: 30px;
+    }
+    
+}
+
+@media (max-width: 850px) {
+ 
+    .col h3 {
+        font-size: 25px;
+    }
+    .activity h2,
+    .blog h2 {
+    width: 100%;
+    font-size: 38px;
+    
+    }
+    section.flex {
+        flex-direction: row;
+    }
+    section.background :nth-child(1) {
+       order: 2;
+       width: 50%;
+       font-size: 20px;
+    }
+    section.background :nth-child(2) {
+        order: 1;
+        width: 100%;
+        padding-bottom: 0px;
+     }
+    section.background :nth-child(3) {
+        order: 3;
+        width: 50%;
+        font-size: 20px;
+     }
+}
+
+
+@media (max-width: 722px) {
+ 
+
+    .activity .col {
+        width: 90%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .blog .col {
+        width: 90%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .activity .col:nth-child(3) {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hide {
+        display: none;
+    }
+    .blog_article {
+        font-size: 20px;
+    }
+    section h2:nth-child(1),
+    section h2:nth-child(3) {
+        width: 90%;
+    }
+    section.background :nth-child(1),
+    section.background :nth-child(3) {
+        font-size: 15px;
+     }
+     section.background :nth-child(2) {
+        padding-bottom: 0px;
+     }
+}
+
+@media (max-width: 376px) {
+
+        .activity h2,
+        .blog h2 {
+            font-size: 25px;
+        }
+
+        .blog_article {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .presentation p img {
+            display: none;
+        }
+        .presentation p {
+            font-size: 18px;
+            text-align: center;
+        }
+        #banner {
+            background-position: left;
+        }
+
+}
