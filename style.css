@@ -7,30 +7,30 @@
     box-sizing: border-box;
 }
 
-/* fonts utilizzati */
-
-@font-face {
-    font-family: Bebas-Regular;
-    src: url(fonts/Bebas-Regular.ttf);
-  }
-@font-face {
-    font-family: Ubuntu-Condensed;
-    src: url(fonts/UbuntuCondensed-Regular.ttf);
-  }
-
 /*Proprietà generali della pagina*/
 
 body{
+    font-family: 'Lato',Helvetica,  sans-serif;
     font-size: 20px;
     color: #2d2d2d;
     background-color: white;
 }
+h1, h2, h3, h4, h5{
+    font-family:  'Bebas Neue', Helvetica, sans-serif;
+}
+
+/* formattazione HEADER e NAV */
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
     align-items: center;
     flex-wrap: wrap;
+}
+img.logo {
+    width:300px; 
+    height:auto;
 }
 nav ul {
     display: flex;
@@ -46,40 +46,44 @@ nav li {
 li a {
     text-decoration: none;
     color: #2d2d2d;
-    font-family: Bebas-Regular;
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+}
+li a:hover {
+    color: #0071bb;
 }
 .active {
     color: #0071bb;
 }
+
+/* formattazione ASIDE */
+
 #banner {
-    background: url(img/banner_volontari.jpg) no-repeat center center;
+    background: url(img/banner.jpg) no-repeat center center;
     width: 100%;
     height: 600px;
     background-size: cover;
 }
-.background {
-    background: url(img/title_background.png) no-repeat center center;
-    background-size: 100% 100%;
-    font-family: Bebas-Regular;
-}
+
+/* formattazion MAIN - "display:flex" di default a SECTION e impostazione margini */
 
 section {
     padding: 0px 10%;
-}
-footer {
-    height: 150px;
-    margin-top: 40px;
-}
-section.background {
-    margin: 0px 0px;
-    justify-content: space-evenly;
-}
-.flex {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 45px;
 }
-section.flex {
+
+/* creazione classe per elementi con sfondo immagine grande */
+
+.background {
+    background: url(img/title_background.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/* PRIMA SECTION (DATI ONLUS) */
+
+section.background {
+    justify-content: space-between;
     margin-top: 15px;
 }
     h2 {
@@ -88,84 +92,324 @@ section.flex {
     padding: 10px 0px;
     font-size: 45px;
 }
-.flex h2:nth-child(odd) {
+.background h2:nth-child(odd) {
     font-size: 30px;
 }
-.flex h2:nth-child(even) {
+.background h2:nth-child(even) {
     font-size: 55px;
 }
+
+/* SECONDA SECTION (PRESENTAZIONE) */
+
 section.presentation {
     margin-top: 60px;
-    padding: 0px 10px 0px 10px;
 }
-.presentation p:nth-child(1) {
+
+/* divisone in colonne degli elementi interni a <section class="presentation">:
+10 px di padding aggiunto per allineare verticalmente i bordi con le immagini */
+
+.presentation p.col {
     width: 40%;
-    font-family: Ubuntu-Condensed;
     line-height: 35px;
+    padding-left: 10px;
+    padding-right: 5px;;
 }
-.presentation p:nth-child(2) {
+.presentation img.col {
     width: 60%;
     /* border: 2px solid black; */
     text-align: right;
+    padding-right: 10px;
+    padding-left: 50px;
+    margin-top: 20px;
 }
-.activity h2,
-.blog h2 {
-    align-items: center;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    border-radius: 50px;
 
+/* TERZA SECTION (OFFERTE) */
+
+/* "display:flex" a DIV contenente ARTICLES e al BLOG (vedi QUARTA SECTION */
+
+.offers,
+.blog {
+
+    display: flex;
+    margin-top: 45px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+/* titoli H3 con sfondo immagine piccolo (no class .background */
+
 .col h3 {
     font-size: 33px;
     text-align: center;
     padding: 8px 0px 20px 0px;
-    font-family: Bebas-Regular;
     background: url(img/subtitle_background_blue.png) no-repeat center center;
     background-size: 100% 45%;
     background-position: top;
 }
-.blog_article {
-    font-family: Ubuntu-Condensed;
-    text-align: left;
-    margin: 20px 0px;
-    font-size: 27px;
-    line-height: 45px;
-}
+
+/* colonne a tre immagini */
+
 .activity .col {
-    width: 30%;
-    padding: 0px 10px 0px 10px;
+    width: 33.33%;
+    padding: 0px 10px;
+    margin-top: 20px;
 }
-div.flex {
-    margin-top: 45px;
-    text-align: center;
-    flex-wrap: wrap;
-}
+
+/* impostazioni per immagini (anche per SECTION BLOG) */
+
 .col img {
     width: 100%;
 }
 .col img:hover {
     opacity: 0.7;
 }
-.blog .col {
-    width: 48%;
-    padding: 0px 10px 0px 10px;
 
+/* impostazione h2 con sfondo immagine */ 
+
+.activity h2,
+.blog h2,
+.team h2 {
+    align-items: center;
+    width: 70%;
+    margin: 0px auto auto;
+    border-radius: 50px;
 }
 
-/* mediaquery */
+/* QUARTA SECTION (BLOG) */
 
+.blog_article {
+    text-align: left;
+    margin: 5px 0px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+/* colonne a due immagini */
+
+.blog .col {
+    width: 50%;
+    padding: 0px 10px;
+}
+
+/* FOOTER con "display: flex" */
+
+footer {
+    background-color: #0071bb;
+    color: white;
+    height: 150px;
+    margin-top: 40px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* colonne a tre del FOOTER */
+
+footer .col {
+    width: 33.33%;
+}
+
+/* colore link a email */
+
+footer .col a {
+    color: rgb(228, 228, 228);
+}
+
+footer .col a:hover {
+    color: #2d2d2d;
+}
+
+/* menu social flex */
+
+footer .menu_social {
+    display: flex;
+    width: auto;  
+    justify-content: center;
+    text-align: right;
+}
+
+/* i link portano ai social di MOHOLE */
+
+footer .menu_social a img {
+    width: 40%;    
+}
+footer a {
+    opacity: 1;
+}
+footer p {
+    font-size: 12px;
+    text-align: justify;
+}
+footer .menu_social a:hover  {
+    opacity: 0.6;
+} 
+
+footer #disclaimer p {
+    text-align: left;          
+} 
+footer  h5,
+footer p {
+    text-align: center;
+}
+
+/* CSS pagina SHOP e pagina MISSION */
+.presentation .col {
+    width: 40%;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 5px;
+    text-align: justify;    
+}
+
+/* divide immagine e testo di MISSION in due colonne uguali */
+
+.mission img.col {
+    width: 30%;
+}
+.mission .col {
+    width: 65%;
+}
+.mission {
+    justify-content: space-between;
+}
+/* riduce il margine */
+
+section.mission {
+    margin-top: 0px;
+}
+
+.h4 {
+    border-bottom: 10px double #0071bb;
+    width: 98%;
+    margin: 0px auto;
+}
+
+.presentation h5,
+span h4 {
+
+    font-size: 32px;   
+    color:  #0071bb; 
+    margin-top: 30px;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+span h4 {
+    margin-bottom: 0px;
+    padding: 5px 50px 0px 50px;
+    background-color: #0071bb;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    border-top-right-radius: 20px;
+}
+
+.presentation p {
+    line-height: 30px;   
+}
+.shop .col,
+.team .col {
+    width: 25%;
+    padding: 0px 10px;
+    margin-top: 1px;
+}
+
+section img{
+    border-radius: 3%;
+}
+.mission img {
+    border-radius: 50%;
+}
+/* .shop img,
+.team img {
+    border-radius: 3%;
+} */
+article .price{
+    color: #0071bb;   
+}
+ .frase_shop{
+    text-align: center;
+    color: #0071bb;  
+    margin: 55px 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 42px;
+    line-height: 70px;
+}
+.team {
+    margin: 100px 0px;
+}
+.help {
+    margin-top: 100px;
+}
+
+/*pagina VOLUNTERING CSS*/
+#banner_2 {
+    background: url(img/banner.jpg) no-repeat center center;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
+.volunteering_25 {
+    width: 40%;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 5px;;
+}
+.volunteering_50 {
+    width: 60%;
+    /* border: 2px solid black; */
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* mediaquery */
 @media (max-width: 1210px) {
- 
-    .presentation p:nth-child(1) {
+    .presentation .col { /*pagina shop*/
+        width: 100%;
+        margin-bottom: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 25px;
+    }
+
+    /* diminuisce il size del font dei titoli delle ACTIVITIES e elimina le colonne col testo e la worldmap */
+    .presentation #testo{
+        line-height: 50px;
+    }
+    .presentation p.col {
         width: 100%;
         margin-bottom: 40px;
+        padding-left: 0px;
     }
-    .presentation p:nth-child(2) {
+    .presentation img.col {
         width: 100%;
         text-align: center;
+        margin-top: 0px;
+        margin-right: 0px;
+        padding-left: 5px;
+    }
+    /* aggiunto per MISSION */
+
+    .mission img.col {
+        width: 60%;
+        margin: 8% auto;
+    }
+    .offers {
+        margin-top: 20px;
     }
     .col h3 {
         font-size: 30px;
@@ -173,20 +417,16 @@ div.flex {
     
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
+
+    /*cambia il layout della SECTION BACKGROUND */ 
  
-    .col h3 {
-        font-size: 25px;
-    }
-    .activity h2,
-    .blog h2 {
-    width: 100%;
-    font-size: 38px;
-    
-    }
-    section.flex {
+    section.background {
         flex-direction: row;
     }
+
+    /* scambia l'ordine degli elementi e mette al primo posto e in alto OUR NUMBER */
+
     section.background :nth-child(1) {
        order: 2;
        width: 50%;
@@ -202,11 +442,19 @@ div.flex {
         width: 50%;
         font-size: 20px;
      }
+     .activity h2,
+     .blog h2 {
+     width: 100%;
+     font-size: 38px;
+     }
+     .col h3 {
+        font-size: 25px;
+    }
 }
 
-
-@media (max-width: 722px) {
+@media (max-width: 780px) {
  
+/* crea il layout a colonna unica */
 
     .activity .col {
         width: 90%;
@@ -224,6 +472,18 @@ div.flex {
         width: 90%;
         margin-bottom: 0px;
     }
+
+    /* aggiunto da Andre: metto i prodotti dello shop su 2 colonne*/
+    /* aggiunt da Giuseppe .team .col per MISSION */
+    .shop .col,
+    .team .col {
+        width: 50%;
+        padding: 0px 5px;
+        margin-top: 1px;
+    }
+
+    /* mette il menu in colonna */
+
     nav ul {
         flex-direction: column;
     }
@@ -231,6 +491,10 @@ div.flex {
         flex-direction: column;
         align-items: flex-start;
     }
+    
+
+    /* nasconde PROGRAMMES AND EVENT dall'H2 della SECTION ACTIVITY per motivi di spazio */
+
     .hide {
         display: none;
     }
@@ -248,10 +512,41 @@ div.flex {
      section.background :nth-child(2) {
         padding-bottom: 0px;
      }
+    
 }
 
-@media (max-width: 376px) {
+@media (max-width: 700px) {
 
+    section.background :nth-child(2) {
+        font-size: 45px;
+      }
+
+    /* footer responsive: mostra per prime le icone */
+
+    footer {
+        flex-direction: column-reverse;
+        height: 250px;
+    }
+    footer div.col {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    div.menu_social a img {
+        width: 30%;
+    }
+    footer .menu_social {
+        text-align: center;
+    }
+
+}
+
+/* mediaquery per iPhone X, iPhone6/7 etc. */
+
+@media (max-width: 415px) {
+
+        .activity {
+            margin-top: 0px;
+        }
         .activity h2,
         .blog h2 {
             font-size: 25px;
@@ -261,9 +556,10 @@ div.flex {
             font-size: 13px;
             line-height: 20px;
         }
-        .presentation p img {
+        /*  L'ho tolta perche mi faceva sparire il banner nella pagina shop
+        .presentation img {
             display: none;
-        }
+        }*/
         .presentation p {
             font-size: 18px;
             text-align: center;
@@ -272,4 +568,63 @@ div.flex {
             background-position: left;
         }
 
+        .mission img.col {
+            width: 80%;
+            margin: 8% auto;
+        }
+    }
+
+/* mediaa query per iPhone5 S/E */
+
+        @media (max-width: 325px) {
+            img.logo {
+                width:250px;
+            }
+            section.background :nth-child(1),
+            section.background :nth-child(3) {
+                font-size: 13px;
+            }
+            .presentation .col p {
+                text-align: left;
+            }
+    }
+
+
+/* CSS per animazioni shop */
+.pos1 {
+    position: relative;
+    overflow: hidden;/* nasconde contenuto che eccede le dimensioni*/
+    border-radius: 3%;
+}
+.pos2 {
+    position: absolute;
+    height: 105px;
+    padding: 10px 10px 0px;
+    background-color: rgba(0,0,0,0.1);
+    color: gray;
+    width: 100%;
+    /* posizionamento assoluto */
+    bottom: -49px;
+    left: 0px;
+    z-index: 2 ;/* se avete più di un elemento absolute 
+    sono ordinabili come livelli con numeri progressivi (piu alto = piu vicino all operatore)*/
+    transition-duration: 0.9s;
+}
+.pos1 img {
+    transition: all 0.9s ease;
+}
+.pos1 img {
+    transform: scale(1.1);
+}
+.pos1 img:hover {   
+    transform: scale(1.2);
+}
+.pos2:hover {
+    color: black;
+    bottom: 0px;
+    transition: all 1s ease-in;
+}
+/* attenzione alla discendenza con ID */
+section#centrale .fa-chevron-down {
+    font-size: 48px;
 }

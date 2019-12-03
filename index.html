@@ -11,7 +11,7 @@
 
         <!-- autore del sito -->
 
-        <meta name="author" content="Giuseppe Conti">
+        <meta name="author" content="Andrea Guffi, Andrea Lepori, Blanche Rodriguez, Giuseppe Conti">
 
         <!-- meta description -->
 
@@ -21,6 +21,9 @@
         <!-- meta keywords -->
 
         <meta name="keywords" content="Ola del Mar, volontariato, spiagge pulite, ONLUS">
+        <!-- link font-->
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
         <title>Ola del Mar - ONLUS</title>
 
@@ -35,14 +38,13 @@
         <header>
             <h1>
                 <a href="index.html">
-                    <!-- quando scriv width e height in html non serve indicare px come unità di misura -->
-                    <img src="img/logo.png" alt="Sito Mohole" width="300" height="auto">
+                    <!-- quando scrivo width e height in html non serve indicare px come unità di misura -->
+                    <img class="logo" src="img/logo.png" alt="Sito Mohole">
                 </a>
             </h1>
             <!-- navigazione principale -->
             <nav>
                 <ul>
-                    <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="mission.html">Mission</a></li>
                     <li><a href="volunteering.html">Volunteering</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -52,49 +54,81 @@
         </header>
         <aside id="banner"></aside>
         <main>
-            <section class="flex background">
+            <section class="background">
                 <h2>Total recovered this year:<br>50593 KG</h2>
                 <h2>OUR NUMBERS</h2>
                 <h2>Total recovered today:<br>593 KG</h2>
             </section>
-            <section class="presentation flex">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab repudiandae et, animi deserunt itaque hic laborum provident ullam dolorem cumque, voluptatem aspernatur, ea error accusamus perferendis. Illo dolorum atque recusandae repellendus, reiciendis voluptate eum! Eaque corporis molestias quas sit laboriosam, nostrum vero deleniti hic explicabo necessitatibus debitis inventore blanditiis voluptatem! Soluta nemo dolor minus. Debitis earum ratione.</p>
-                <p>
-                <img src="img/worldmap.png" alt="map of the world" width="90%" height="100%">
+            <section class="presentation">
+                <p class="col">Ola del Mar is an Onlus that collect plastic in the sea and oceans. We operate in Italy and around the world with the help of voluntary workers. By cleaning oceans and seas from the plastic through our kits and divided into groups of volunteerings. OLA DEL MAR can be your new family to help our planet.
                 </p>
+                <img class="col" src="img/worldmap.png" alt="map of the world" width="100%" height="auto">
             </section>
+
             <section class="activity">
                 <h2 class="background">Activities<span class="hide">, Programmes and Events</span></h2>
-                <div class="flex">
+                <div class="offers">
                 <article class=col>
-                    <h3 class="background_h3">Helping worldwide</h3>
-                    <p><img src="img/bottle_beach.jpg" alt=""></p>
+                    <h3 class="background_h3">Volunteering</h3>
+                    <p><a href="#"><img src="img/bottle_beach.jpg" alt=""></a></p>
                 </article>
                 <article class=col>
                     <h3>Family events</h3>
-                    <p><img src="img/child_plastic.jpg" alt=""></p>
+                    <p><a href="#"><img src="img/child_plastic.jpg" alt=""></a></p>
                     </article>
                 <article class=col>
                     <h3>Education</h3>
-                    <p><img src="img/school.jpg" alt=""></p>
+                    <p><a href="#"><img src="img/school.jpg" alt=""></a></p>
                 </article>
                 </div>
             </section>
+
             <section class="blog">
                 <h2 class="background">Articles</h2>
-                <div class="flex">
+                <div class="blog">
                     <article class=col>
-                        <p><img src="img/vietnam.jpg" alt=""></p>
-                        <h4 class="blog_article">Photographing Marine Life, unique opportunity for travelling Volunteers</h4>
+                        <p><a href="#"><img src="img/vietnam.jpg" alt=""></a></p>
+                        <p class="blog_article">Photographing Marine Life, unique opportunity for travelling Volunteers</p>
                     </article>
                     <article class=col>
-                        <p><img src="img/vietnam.jpg" alt=""></p>
-                        <h4 class="blog_article">Worldpacker traveler’s guide for young (and not) enviromentalists</h4>
+                        <p><a href="#"><img src="img/vietnam.jpg" alt=""></a></p>
+                        <p class="blog_article">Worldpacker traveler’s guide for young (and not) enviromentalists</p>
                     </article>  
             </section>
-            <footer class="background">
-
-            </footer>
         </main>
+            <footer>
+                    <div class="col" id="disclaimer">
+                            <h5>Disclaimer</h5>
+                            <p>Questo sito è stato creato a scopo didattico, 
+                               dagli allievi del primo anno Scuola Web & App Mohole.
+                               Le situazioni create sono immaginarie e create per produrre 
+                               contenuti dimostrativi fittizi.
+                            </p>
+                    </div>  
+                    <div class="col">
+                            <h5>Mohole</h5>
+                            <p>Via Ventura 5, Milano (MI)
+                            <br>
+                            Email: <a id="email"href="mailto:scuolamohole.it">Scuola@mohole.it</a>
+                            <br>
+                            Telefono: 02 1234567                   
+                            </p>
+                    </div>                    
+                    <div class="col"> 
+                       <!--<h5>be social</h5> -->              
+                        <div class="menu_social">                      
+                        <a href="https://www.facebook.com/mohole/" id="fb" title="facebook" target="_blank">
+                            <img src="img/facebook.png" alt="logo Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/scuolamohole/?hl=it" id="fb" title="instagram" target="_blank">
+                            <img src="img/instagram.png" alt="logo Instagram">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOu3XN2DB6lFEQTIeo41Nxw" id="yt" title="youtube" target="_blank">
+                            <img src="img/youtube.png" alt="logo Youtube">
+                        </a>      
+                        </div>
+                    </div>                    
+            </footer>
+        
 </body>
 </html>
