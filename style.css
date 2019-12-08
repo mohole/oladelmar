@@ -411,104 +411,107 @@ article .price{
 }
 .help {
     margin-top: 100px;
-}S
+}
 
 /*pagina VOLUNTERING CSS*/
 main.volont{
-        margin: 20px;
-        display: flex;
-        flex-wrap: wrap; /*va a capo quando non c'è più spazio. è utile per il responsive*/         
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap; /*va a capo quando non c'è più spazio. è utile per il responsive*/         
 }
 main.volont .colonna_25{
-    width: 25%;
-    padding: 20px;
-    text-align: center;
-    font-size: 17px;
+width: 25%;
+padding: 20px;
+text-align: center;
+font-size: 17px;
 }
 main.volont .colonna_50{
-    width: 50%;
-    
-    text-align: center;
+width: 50%;    
+text-align: center;
 }
 main.volont h3{
-    font-size: 32px;
-    color: #0071bb;
+font-size: 32px;
+color: #0071bb;
 }
 
 .search{ /* colonna sx */
-    border: 1px solid  gray;
-    text-align: center;
-    border-radius: 2%;   
+border: 1px solid  gray;
+text-align: center;
+border-radius: 2%;   
 }
 .search p{
-    text-align: center;
-    color: gray;
+text-align: center;
+color: gray;
 }
 
 .title_25 p{
-    text-align: left;
-    color: #0071bb;
-    font-size: 25px;
-    padding-top: 35px;
+text-align: left;
+color: #0071bb;
+font-size: 25px;
+padding-top: 35px;
 }
 .destination ul,
 .how_help ul{
-    padding-top: 15px;
+padding-top: 15px;
 }
 main.volont li{
-    line-height: 32px;
-    text-align: left;
-    list-style: none;
+line-height: 32px;
+text-align: left;
+list-style: none;
 } /* finito colonna sx */
 
 /* inizio colonna dx */
-article .cont_blu{
-   
-    text-align: center;
-    margin-right: 20px;
-    background-color: #0071bb;
-    border-radius: 3%;
+article .cont_blu{ 
+text-align: center;
+margin-right: 20px;
+background-color: #0071bb;
+border-radius: 3%;
 }
 p.big{
-    font-size: 24px;
+font-size: 24px;
 }
 .cont_blu p{
-    padding: 15px;
-    color: white;
+padding: 15px;
+color: white;
 }
 article .domande{
-    padding-top: 20px;
-    text-align: center;
-    margin-right: 20px;
-    text-align: left;
+padding-top: 20px;
+text-align: center;
+margin-right: 20px;
+text-align: left;
 }
 p.question{
-    color: #0071bb;
-    font-size: 25px;
+color: #0071bb;
+font-size: 25px;
 }/* fine colonna dx */
 
 
 /* colonna centrale*/
 
 .cont_opport{
-    display: flex;
-    height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: left;
+display: flex;
+height: auto;
+padding-top: 20px;
+padding-bottom: 20px;   
 }
-.cont_opport img{
-    width: 60%;
-    height: auto;
-}
-/*div.tre{
-    padding-right: 70px;
+div.tre{
+padding-left: 10px;
+text-align: left;
+align-items: center;
+align-content: center;
 }
 
+div.tre{
+
+text-align: left;
+}
+.quadrato img{
+border-radius: 3%;
+}
 article.colonna_50 p{
     font-size: 15px;
     line-height: 30px;
-}*/
+}
 
 
 /* CSS BLOG */
@@ -727,6 +730,20 @@ article.colonna_50 p{
      section.background :nth-child(2) {
         padding-bottom: 0px;
      }
+    /* query pagina volunteering*/
+    .colonna_25{
+    display: none;
+    }
+    main.volont .colonna_50{
+        width: 100%;    
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cont_opport {
+        flex-direction: column;
+        align-items:center;
+    }
     
 }
 
