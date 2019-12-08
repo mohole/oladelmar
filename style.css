@@ -198,7 +198,9 @@ img {
 .image_author{
     width: 40px;
     height: 40px;
-    background-color: blue;
+}
+.image_author img {
+    border-radius: 50%;
 }
 .cont_info_author{
     display: flex;
