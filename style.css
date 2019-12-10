@@ -373,9 +373,14 @@ form {
 }
 
 input {
-    border: 1px solid black;
+    border: 2px solid #2d2d2d;
     display: block;
     margin: 20px 0px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.tre h5 {
+    margin: 10px 0px;
 }
 .col_3 {
     width: 33.3%;
@@ -396,6 +401,10 @@ input {
 .team img {
     border-radius: 3%;
 } */
+section.shop h5{
+    font-size: 24px;
+    padding-bottom: 30px;
+}
 article .price{
     color: #0071bb;   
 }
@@ -408,6 +417,7 @@ article .price{
     font-size: 42px;
     line-height: 70px;
 }
+
 .team {
     margin: 100px 0px;
 }
@@ -436,16 +446,6 @@ font-size: 32px;
 color: #0071bb;
 }
 
-.search{ /* colonna sx */
-border: 1px solid  gray;
-text-align: center;
-border-radius: 2%;   
-}
-.search p{
-text-align: center;
-color: gray;
-}
-
 .title_25 p{
 text-align: left;
 color: #0071bb;
@@ -460,11 +460,27 @@ main.volont li{
 line-height: 32px;
 text-align: left;
 list-style: none;
-} /* finito colonna sx */
+} 
+.title_25 li a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+.title_25 li a:hover {
+    color: #0071bb;
+}
+/* finito colonna sx */
+
+.cont_opport h5 a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-family: 'Bebas Neue';
+}
 
 /* inizio colonna dx */
 article .cont_blu{ 
 text-align: center;
+margin-top: 90px;
 margin-right: 20px;
 background-color: #0071bb;
 border-radius: 3%;
@@ -485,16 +501,37 @@ text-align: left;
 p.question{
 color: #0071bb;
 font-size: 25px;
-}/* fine colonna dx */
+}
+button.bott_joinus{
+    background-color: #fff;
+    color: #0071bb;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+button.bott_joinus{
+    font-size: 28px;
+}
+/* fine colonna dx */
 
 
 /* colonna centrale*/
+article.colonna_50 form{
+    display: none;
+    font-size: 24px;   
+    padding: 10px;
+}
 
+
+
+article.colonna_50 h3{
+    margin-top: 25px;
+}
 .cont_opport{
 display: flex;
 height: auto;
-padding-top: 20px;
-padding-bottom: 20px;   
+padding-top: 30px;
+padding-bottom: 20px; 
+margin-left: auto;
 }
 div.tre{
 padding-left: 10px;
@@ -502,17 +539,23 @@ text-align: left;
 align-items: center;
 align-content: center;
 }
-
-div.tre{
-
-text-align: left;
-}
 .quadrato img{
 border-radius: 3%;
 }
 article.colonna_50 p{
     font-size: 15px;
     line-height: 30px;
+}
+article.colonna_50 span{
+    font-size: 15px;
+    line-height: 30px;
+}
+main.volont .see_more{
+    margin-top: 40px;
+}
+main.volont .see_more p{
+    font-size: 24px;
+    color: #0071bb;
 }
 
 
@@ -595,7 +638,7 @@ article.colonna_50 p{
     }
     .presentation .col_2 {
         width: 100%;
-        text-align: justi;
+        text-align: justify;
         margin-top: 0px;
         margin-right: 0px;
         padding-left: 5px;
@@ -725,10 +768,11 @@ article.colonna_50 p{
     section h2:nth-child(3) {
         width: 90%;
     }
+    /*
     section.background :nth-child(1),
     section.background :nth-child(3) {
         font-size: 15px;
-     }
+     } */
      section.background :nth-child(2) {
         padding-bottom: 0px;
      }
@@ -745,6 +789,10 @@ article.colonna_50 p{
     .cont_opport {
         flex-direction: column;
         align-items:center;
+    }
+    article.colonna_50 form{
+        display: inline;
+        border-radius: 3%;
     }
     
 }
@@ -834,34 +882,17 @@ article.colonna_50 p{
     overflow: hidden;/* nasconde contenuto che eccede le dimensioni*/
     border-radius: 3%;
 }
-.pos2 {
-    position: absolute;
-    height: 105px;
-    padding: 10px 10px 0px;
-    background-color: rgba(0,0,0,0.1);
-    color: gray;
-    width: 100%;
-    /* posizionamento assoluto */
-    bottom: -49px;
-    left: 0px;
-    z-index: 2 ;/* se avete più di un elemento absolute 
-    sono ordinabili come livelli con numeri progressivi (piu alto = piu vicino all operatore)*/
-    transition-duration: 0.9s;
-}
+
 .pos1 img {
     transition: all 0.9s ease;
 }
 .pos1 img {
-    transform: scale(1.1);
+    transform: scale(1.0);
 }
 .pos1 img:hover {   
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
-.pos2:hover {
-    color: black;
-    bottom: 0px;
-    transition: all 1s ease-in;
-}
+
 /* attenzione alla discendenza con ID */
 section#centrale .fa-chevron-down {
     font-size: 48px;
