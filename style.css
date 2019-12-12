@@ -199,10 +199,11 @@ span.author_name{
     padding: 0px 10px;
 }
 /* FOOTER con "display: flex" */
+
 footer {
     background-color: #0071bb;
     color: white;
-    height: 150px;
+    height: 170px;
     margin-top: 40px;
     padding: 0px 20px;
     display: flex;
@@ -737,7 +738,7 @@ main.volont .see_more p{
 
     footer {
         flex-direction: column-reverse;
-        height: 250px;
+        height: 280px;
     }
     footer div.col {
         width: 100%;
