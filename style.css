@@ -608,7 +608,10 @@ main.volont .see_more p{
     }
     .newsletter img {
         width: 60%;
-    }   
+    }
+    form {
+        padding-left: 0px;
+    }
 }
 @media (max-width: 1000px) {
 
@@ -748,6 +751,10 @@ main.volont .see_more p{
     }
     div.card {
         width: 85%;
+    }
+    .fab {
+        padding-left: 0px;
+        padding: 10px;
     }
 }
 /* mediaquery per iPhone X, iPhone6/7 etc. */
