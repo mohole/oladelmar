@@ -6,9 +6,7 @@
     font-size: 100%;
     box-sizing: border-box;
 }
-
 /*Proprietà generali della pagina*/
-
 body{
     font-family: 'Lato',Helvetica,  sans-serif;
     font-size: 20px;
@@ -18,7 +16,6 @@ body{
 h1, h2, h3, h4, h5{
     font-family:  'Bebas Neue', Helvetica, sans-serif;
 }
-
 /* formattazione HEADER e NAV */
 
 header {
@@ -34,6 +31,7 @@ img.logo {
 }
 nav ul {
     display: flex;
+    align-items: center;
 }
 nav li {
     display: inline-block; /* tende a togliere i pallini a <li> */
@@ -51,37 +49,32 @@ li a {
 li a:hover {
     color: #0071bb;
 }
+a.call_action {
+    color: #0071bb;
+}
 .active {
     color: #0071bb;
 }
-
 /* formattazione ASIDE */
-
 #banner {
     background: url(img/banner.jpg) no-repeat center center;
     width: 100%;
     height: 600px;
     background-size: cover;
 }
-
 /* formattazion MAIN - "display:flex" di default a SECTION e impostazione margini */
-
 section {
     padding: 0px 10%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 45px; /*vedi perche eredita il margin-top nello shop*/
 }
-
 /* creazione classe per elementi con sfondo immagine grande */
-
 .background {
     background: url(img/title_background.png) no-repeat center center;
     background-size: 100% 100%;
 }
-
 /* PRIMA SECTION (DATI ONLUS) */
-
 section.background {
     justify-content: space-between;
     margin-top: 15px;
@@ -98,9 +91,7 @@ section.background {
 .background h2:nth-child(even) {
     font-size: 55px;
 }
-
 /* SECONDA SECTION (PRESENTAZIONE) */
-
 section.presentation {
     margin-top: 60px;
 }
@@ -112,10 +103,8 @@ section.presentation span{
 section.presentation p.pag_index{
     font-size: 26px;
 }
-
 /* divisone in colonne degli elementi interni a <section class="presentation">:
 10 px di padding aggiunto per allineare verticalmente i bordi con le immagini */
-
 .presentation .col {
     width: 40%;
     line-height: 35px;
@@ -130,11 +119,8 @@ section.presentation p.pag_index{
     padding-left: 10px;
     margin-top: 0px;
 }
-
 /* TERZA SECTION (OFFERTE) */
-
 /* "display:flex" a DIV contenente ARTICLES e al BLOG (vedi QUARTA SECTION */
-
 .offers,
 .blog {
 
@@ -144,9 +130,7 @@ section.presentation p.pag_index{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
 /* titoli H3 con sfondo immagine piccolo (no class .background */
-
 .col h3 {
     font-size: 33px;
     text-align: center;
@@ -155,7 +139,6 @@ section.presentation p.pag_index{
     background-size: 100% 45%;
     background-position: top;
 }
-
 /* colonne a tre immagini */
 
 .activity .col {
@@ -163,9 +146,7 @@ section.presentation p.pag_index{
     padding: 0px 10px;
     margin-top: 20px;
 }
-
 /* impostazioni per immagini (anche per SECTION BLOG) */
-
 img {
     width: 100%;
     max-width: 100%;
@@ -174,9 +155,7 @@ img {
  a img:hover {
     opacity: 0.7;
 }
-
 /* impostazione h2 con sfondo immagine */ 
-
 .activity h2,
 .blog h2,
 .team h2 {
@@ -185,9 +164,7 @@ img {
     margin: 0px auto auto;
     border-radius: 50px;
 }
-
 /* QUARTA SECTION (BLOG) */
-
 .blog_article {
     font-weight: bold;
     text-align: left;
@@ -210,21 +187,18 @@ img {
 
 p.article_left{
     text-align: left;
+    text-decoration: none;
 }
 span.author_name{
     padding-left: 15px;
     font-size: 12px;
 }
-
 /* colonne a due immagini */
-
 .blog .col {
     width: 50%;
     padding: 0px 10px;
 }
-
 /* FOOTER con "display: flex" */
-
 footer {
     background-color: #0071bb;
     color: white;
@@ -235,32 +209,24 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 /* colonne a tre del FOOTER */
-
 footer .col {
     width: 33.33%;
 }
-
 /* colore link a email */
-
 footer .col a {
     color: rgb(228, 228, 228);
 }
-
 footer .col a:hover {
     color: #2d2d2d;
 }
-
 /* menu social flex */
-
 footer .menu_social {
     display: flex;
     width: auto;  
     justify-content: center;
     text-align: right;
 }
-
 /* i link portano ai social di MOHOLE */
 .fab {
     padding-left: 30px;
@@ -275,7 +241,6 @@ footer p {
 footer .menu_social a:hover  {
     opacity: 0.6;
 } 
-
 footer #disclaimer p {
     text-align: left;          
 } 
@@ -289,7 +254,6 @@ h1.motto{
     font-size: 54px;
     color: #0071bb;
 }
-
 /* CSS pagina SHOP e pagina MISSION */
 .presentation div.col {
     line-height: 35px;
@@ -300,9 +264,7 @@ h1.motto{
 div.emoji {
     align-items: stretch;
 }
-
 /* divide immagine e testo di MISSION in due colonne uguali */
-
 .mission .col {
     width: 30%;
 }
@@ -314,27 +276,22 @@ div.emoji {
     justify-content: space-between;
 }
 /* riduce il margine */
-
 section.mission {
     margin-top: 0px;
 }
-
 .h4 {
     border-bottom: 10px double #0071bb;
     width: 98%;
     margin: 0px auto;
 }
-
 .presentation h5,
 span h4 {
-
     font-size: 32px;   
     color:  #0071bb; 
     margin-top: 30px;
     margin: 10px auto;
     width: fit-content;
 }
-
 span h4 {
     margin-bottom: 0px;
     padding: 5px 50px 0px 50px;
@@ -396,11 +353,6 @@ input {
     margin-top: 110px;
     color: white;
 }
-
-/* .shop img,
-.team img {
-    border-radius: 3%;
-} */
 section.shop h5{
     font-size: 24px;
     padding-bottom: 30px;
@@ -417,14 +369,12 @@ article .price{
     font-size: 42px;
     line-height: 70px;
 }
-
 .team {
     margin: 100px 0px;
 }
 .help {
     margin-top: 100px;
 }
-
 /*pagina VOLUNTERING CSS*/
 main.volont{
     margin: 20px;
@@ -445,7 +395,6 @@ main.volont h3{
 font-size: 32px;
 color: #0071bb;
 }
-
 .title_25 p{
 text-align: left;
 color: #0071bb;
@@ -476,7 +425,6 @@ list-style: none;
     color: #2d2d2d;
     font-family: 'Bebas Neue';
 }
-
 /* inizio colonna dx */
 article .cont_blu{ 
 text-align: center;
@@ -512,17 +460,12 @@ button.bott_joinus{
     font-size: 28px;
 }
 /* fine colonna dx */
-
-
 /* colonna centrale*/
 article.colonna_50 form{
     display: none;
     font-size: 24px;   
     padding: 10px;
 }
-
-
-
 article.colonna_50 h3{
     margin-top: 25px;
 }
@@ -557,39 +500,30 @@ main.volont .see_more p{
     font-size: 24px;
     color: #0071bb;
 }
-
-
 /* CSS BLOG */
-
     section.blog_content {
     padding: 0px;
     margin-top: 0px;
     margin: 2%;
     justify-content: center;
-   }
-   
+   }  
    div.card {
         width: 20%;
-        box-shadow: 2px 2px 5px #2d2d2d;
+        border: 1px solid #2d2d2d;
         border-radius: 5px; 
         margin: 2%;
-        background-color: lightgray;
        }
 
    .image {
         border-radius: 5px;
    }    
-   
    .image img {
         border-radius: 0px;
-        padding: 10px;
-     }
-   
+     } 
    .title {
         text-align: center;
         padding: 10px;
     }
-   
    .des {
         padding: 3px;
         text-align: center;
@@ -597,7 +531,11 @@ main.volont .see_more p{
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
    }
-
+   .des p {
+       font-size: 14px;
+       text-align: left;
+       padding: 10px;
+   }
    button{
         margin-top: 40px;
         margin-bottom: 10px;
@@ -615,8 +553,6 @@ main.volont .see_more p{
    .image .cont_info_author {
        justify-content: space-evenly;
    }
-
-
 /* mediaquery */
 @media (max-width: 1210px) {
     .presentation .col { /*pagina shop*/
@@ -626,7 +562,6 @@ main.volont .see_more p{
         margin-right: auto;
         line-height: 25px;
     }
-
     /* diminuisce il size del font dei titoli delle ACTIVITIES e elimina le colonne col testo e la worldmap */
     .presentation #testo{
         line-height: 50px;
@@ -643,18 +578,14 @@ main.volont .see_more p{
         margin-right: 0px;
         padding-left: 5px;
     }
-
     /* aggiunto per MISSION */
-
     .newsletter {
         text-align: center;
     }
-
     input {
         margin-left: auto; 
         margin-right: auto;
     }
-
     .mission div.col {
         width: 60%;
         margin: 8% auto;
@@ -677,9 +608,7 @@ main.volont .see_more p{
     }
     .newsletter img {
         width: 60%;
-    }
-
-    
+    }   
 }
 @media (max-width: 1000px) {
 
@@ -754,10 +683,7 @@ main.volont .see_more p{
         flex-direction: column;
         align-items: flex-start;
     }
-    
-
     /* nasconde PROGRAMMES AND EVENT dall'H2 della SECTION ACTIVITY per motivi di spazio */
-
     .hide {
         display: none;
     }
@@ -796,13 +722,14 @@ main.volont .see_more p{
     }
     
 }
-
 @media (max-width: 700px) {
-
     section.background :nth-child(2) {
         font-size: 45px;
       }
-
+      section.shop h5{
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
     /* footer responsive: mostra per prime le icone */
 
     footer {
@@ -820,15 +747,11 @@ main.volont .see_more p{
         text-align: center;
     }
     div.card {
-        width: 70%;
+        width: 85%;
     }
-
 }
-
 /* mediaquery per iPhone X, iPhone6/7 etc. */
-
 @media (max-width: 415px) {
-
         .activity {
             margin-top: 0px;
         }
@@ -836,7 +759,6 @@ main.volont .see_more p{
         .blog h2 {
             font-size: 25px;
         }
-
         .blog_article {
             font-size: 13px;
             line-height: 20px;
@@ -847,21 +769,17 @@ main.volont .see_more p{
         }*/
         .presentation p {
             font-size: 18px;
-            text-align: center;
+            text-align: left;
         }
         #banner {
             background-position: left;
         }
-
         .mission div.col {
             width: 80%;
             margin: 10% auto;
-        }
-    
+        }  
     }
-
 /* mediaa query per iPhone5 S/E */
-
         @media (max-width: 325px) {
             img.logo {
                 width:250px;
@@ -874,15 +792,12 @@ main.volont .see_more p{
                 text-align: left;
             }
     }
-
-
 /* CSS per animazioni shop */
 .pos1 {
     position: relative;
     overflow: hidden;/* nasconde contenuto che eccede le dimensioni*/
     border-radius: 3%;
 }
-
 .pos1 img {
     transition: all 0.9s ease;
 }
@@ -892,7 +807,6 @@ main.volont .see_more p{
 .pos1 img:hover {   
     transform: scale(1.1);
 }
-
 /* attenzione alla discendenza con ID */
 section#centrale .fa-chevron-down {
     font-size: 48px;
