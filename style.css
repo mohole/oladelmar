@@ -739,7 +739,7 @@ main.volont .see_more p{
 
     footer {
         flex-direction: column-reverse;
-        height: 250px;
+        height: 270px;
     }
     footer div.col {
         width: 100%;
