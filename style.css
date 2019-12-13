@@ -199,11 +199,10 @@ span.author_name{
     padding: 0px 10px;
 }
 /* FOOTER con "display: flex" */
-
 footer {
     background-color: #0071bb;
     color: white;
-    height: 170px;
+    height: 150px;
     margin-top: 40px;
     padding: 0px 20px;
     display: flex;
@@ -722,7 +721,9 @@ main.volont .see_more p{
     }
     article.colonna_50 form{
         display: inline;
-        border-radius: 3%;
+    }
+    input {
+        width: 80%;
     }
     
 }
@@ -738,7 +739,7 @@ main.volont .see_more p{
 
     footer {
         flex-direction: column-reverse;
-        height: 280px;
+        height: 250px;
     }
     footer div.col {
         width: 100%;
