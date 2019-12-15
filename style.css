@@ -49,9 +49,6 @@ li a {
 li a:hover {
     color: #0071bb;
 }
-a.call_action {
-    color: #0071bb;
-}
 .active {
     color: #0071bb;
 }
